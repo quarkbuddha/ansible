@@ -1,0 +1,44 @@
+Source: ansible
+Maintainer: Mark Buda <hermit@acm.org>
+XSBC-Original-Maintainer: Harlan Lieberman-Berg <hlieberman@debian.org>
+Uploaders: Michael Vogt <mvo@debian.org>, Lee Garrett <debian@rocketjump.eu>
+Section: admin
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               python-all,
+               python-crypto,
+               python-setuptools,
+               python-yaml,
+               asciidoc,
+               python-nose,
+               python-passlib,
+               dh-python
+Standards-Version: 4.1.1
+Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/ansible.git
+Vcs-Git: https://anonscm.debian.org/git/collab-maint/ansible.git
+Homepage: https://www.ansible.com
+
+Package: ansible
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends},
+         python-crypto,
+         python-yaml,
+         openssh-client | python-paramiko,
+         python-jinja2,
+         python-httplib2,
+         python-netaddr
+Recommends: python-cryptography,
+            python-jmespath,
+            python-kerberos,
+            python-libcloud,
+            python-selinux,
+            python-winrm (>= 0.1.1),
+            python-xmltodict
+Suggests: cowsay, sshpass
+Description: Configuration management, deployment, and task execution system
+ Ansible is a radically simple model-driven configuration management,
+ multi-node deployment, and remote task execution system. Ansible works
+ over SSH and does not require any software or daemons to be installed
+ on remote nodes. Extension modules can be written in any language and
+ are transferred to managed machines automatically.
